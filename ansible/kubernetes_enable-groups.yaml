@@ -1,0 +1,12 @@
+---
+- hosts: kubernetes-01-master
+  gather_facts: yes
+  become: yes
+  roles:
+  - rpi_enable-cgroups
+
+- hosts: kubernetes-01-worker
+  gather_facts: yes
+  become: yes
+  roles:
+  - rpi_enable-cgroups

@@ -1,0 +1,10 @@
+# environment requirement
+# kubernetes_master_url, master url for k3s
+# kubernetes_token, cluster token for k3s
+
+---
+- hosts: kubernetes-01-worker
+  gather_facts: yes
+  become: yes
+  roles:
+  - k3s_worker-join

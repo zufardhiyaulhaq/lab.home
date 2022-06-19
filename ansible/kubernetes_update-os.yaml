@@ -1,0 +1,6 @@
+---
+- hosts: kubernetes-01
+  gather_facts: yes
+  become: yes
+  roles:
+  - ubuntu_update-os

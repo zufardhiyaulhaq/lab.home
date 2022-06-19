@@ -1,0 +1,19 @@
+
+all:
+  children:
+    kubernetes-01-master:
+      hosts:
+        master-01.kubernetes-01.home.zufardhiyaulhaq.com:
+    kubernetes-01-worker:
+      hosts:
+        worker-01.kubernetes-01.home.zufardhiyaulhaq.com:
+        worker-02.kubernetes-01.home.zufardhiyaulhaq.com:
+        worker-03.kubernetes-01.home.zufardhiyaulhaq.com:
+        worker-04.kubernetes-01.home.zufardhiyaulhaq.com:
+    kubernetes-01:
+      children:
+        kubernetes-01-master:
+        kubernetes-01-worker:
+  vars:
+    ansible_ssh_extra_args: '-o StrictHostKeyChecking=no'
+    ansible_user: "zufar"
