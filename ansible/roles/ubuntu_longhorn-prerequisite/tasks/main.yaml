@@ -1,0 +1,17 @@
+- name: Install nfs-common
+  poll: 0
+  apt:
+    name: "nfs-common"
+    state: latest
+
+- name: Install iscsi
+  poll: 0
+  apt:
+    name: "open-iscsi"
+    state: latest
+
+- name: Install util-linux
+  poll: 0
+  apt:
+    name: "util-linux"
+    state: latest
